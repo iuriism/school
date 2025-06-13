@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online English School</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="header">
+    <h1 id="site-title">Welcome to Our Online English School</h1>
+  </header>
+
+  <nav id="nav-bar">
+    <a href="#about" id="link-about">About</a>
+    <a href="#courses" id="link-courses">Courses</a>
+    <a href="#signup" id="link-signup">Sign Up</a>
+    <a href="#contact" id="link-contact">Contact</a>
+    <a href="#users" id="link-users">Users</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2 id="about-title">About Our School</h2>
+      <p id="about-text">We offer flexible and interactive online English lessons for all levels. Learn at your own pace with qualified teachers.</p>
+    </section>
+
+    <section id="courses">
+      <h2 id="courses-title">Courses</h2>
+      <ul id="course-list">
+        <li id="course-basic">Basic English</li>
+        <li id="course-intermediate">Intermediate English</li>
+        <li id="course-advanced">Advanced English</li>
+        <li id="course-business">Business English</li>
+      </ul>
+    </section>
+
+    <section id="signup">
+      <h2 id="signup-title">Sign Up for a Course</h2>
+      <form id="signup-form">
+        <label for="input-name">Name:</label>
+        <input type="text" id="input-name" name="name" required>
+        <span class="error" id="error-name"></span>
+
+        <label for="input-email">Email:</label>
+        <input type="email" id="input-email" name="email" required>
+        <span class="error" id="error-email"></span>
+
+        <label for="select-course">Choose Course:</label>
+        <select id="select-course" name="course">
+          <option value="">-- Please select --</option>
+          <option value="basic">Basic English</option>
+          <option value="intermediate">Intermediate English</option>
+          <option value="advanced">Advanced English</option>
+          <option value="business">Business English</option>
+        </select>
+        <span class="error" id="error-course"></span>
+
+        <button type="submit" id="btn-submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2 id="contact-title">Contact Us</h2>
+      <form id="contact-form">
+        <label for="contact-name">Your Name:</label>
+        <input type="text" id="contact-name" name="contact-name" required>
+
+        <label for="contact-message">Message:</label>
+        <textarea id="contact-message" name="contact-message" required></textarea>
+
+        <button type="submit" id="btn-contact-submit">Send</button>
+      </form>
+    </section>
+
+    <section id="users">
+      <h2 id="users-title">Registered Users</h2>
+      <button id="btn-load-users">Load Users</button>
+      <table id="users-table" border="1" style="margin-top: 1rem; display: none; width: 100%; max-width: 600px;">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+          </tr>
+        </thead>
+        <tbody id="users-table-body">
+          <!-- Rows will be inserted here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <p id="footer-text">&copy; 2025 Online English School. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
